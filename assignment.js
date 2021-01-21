@@ -34,12 +34,12 @@ function hotelCost(day) {
     } else {
         var day10 = 10 * 100;
         var day20 = 10 * 80;
-        var remainingDay = day - 20; //cointing remaining  day to get 11-20days
+        var remainingDay = day - 20; //cointing remaining  day to get after 20 days
         var restOfTheDay = remainingDay * 50 ;
         totalCost = day10 + day20 + restOfTheDay;
     }
     return totalCost;
 }
 
-var result = hotelCost(20);
-console.log(result);
+// var result = hotelCost(20);
+// console.log(result);
