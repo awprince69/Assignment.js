@@ -35,11 +35,25 @@ function hotelCost(day) {
         var day10 = 10 * 100;
         var day20 = 10 * 80;
         var remainingDay = day - 20; //cointing remaining  day to get after 20 days
-        var restOfTheDay = remainingDay * 50 ;
+        var restOfTheDay = remainingDay * 50;
         totalCost = day10 + day20 + restOfTheDay;
     }
     return totalCost;
 }
 
-// var result = hotelCost(20);
+// var result = hotelCost(91);
 // console.log(result);
+
+function megaFriend(friendsName) {
+    var longName = friendsName[0];
+    for (var i = 0; i < friendsName.length; i++) {
+        var element = friendsName[i];
+        if (element.length > longName.length) {
+            longName = element;
+        }
+    }
+    return longName;
+}
+
+var result = megaFriend(["abdul wadud Prince","deepu", "unmoy", "shamim", "abdul wahid Tanzim"]);
+console.log(result);
