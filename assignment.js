@@ -1,76 +1,99 @@
+
+
 //Kilometer to Meter Calculation
 function kilometerToMeter(kilometer) {
-    var meter = kilometer * 1000;
 
-    if (kilometer <= 0) {
+    if (kilometer < 0) {
         return ("Kilometer input is invalid");//validation checker
     }
+    else {
+        var meter = kilometer * 1000; //calculate to get Meter 
+    }
 
-    return meter;
+    return meter; // value to be returned to the function caller
 }
 
-var user1 = kilometerToMeter(-1);
-console.log(user1);
+// var user1 = kilometerToMeter(8);
+// console.log(user1);
+
+
 
 //Budget calulator
-
 function budgetCalculator(watch, phone, laptop) {
-    var watchPrice = watch * 50;
+
+    var watchPrice = watch * 50;                  //calculate here parameter input (watch,phone,laptop) price 
     var phonePrice = phone * 100;
     var laptopPrice = laptop * 500;
 
-    var totalBudget = watchPrice + phonePrice + laptopPrice;
+    var totalBudget = watchPrice + phonePrice + laptopPrice; //calculate total amount
 
-    if (watchPrice <=0 || phonePrice <=0 || laptopPrice <=0) {   //validation checker
+    if (watchPrice < 0 || phonePrice < 0 || laptopPrice < 0) {   //validation checker
         return ("Budgetcalculator input is invalid");
     }
 
-    return totalBudget;
+    return totalBudget;     // value to be returned to the function caller
 }
 
-var result = budgetCalculator(0, 0,0);
-console.log(result);
+// var result = budgetCalculator(1, 5, 5);
+// console.log(result);
+
+
+
 
 //Hotel Cost Counting
 function hotelCost(day) {
     var totalCost = 0;
-    if (day <= 10) {
-        totalCost = day * 100;
-    } else if (day <= 20) {
-        var firstTenDay = 10 * 100;
-        var remainingDay = day - 10; //counting remaining  day to get 11-20days
-        var secondTenDay = remainingDay * 80;
-        totalCost = firstTenDay + secondTenDay;
-    } else {
-        var firstTenDay = 10 * 100;
-        var secondTenDay = 10 * 80;
-        var remainingDay = day - 20; //counting remaining  day to get after 20 days
-        var restOfTheDay = remainingDay * 50;
-        totalCost = firstTenDay + secondTenDay + restOfTheDay;
+
+    if (day < 0) {
+        return ("Day cannot be Negative");//Validation Checker
     }
-    if(day<=0){
-        return ("Day cannot be Negative");
+    else {
+        if (day <= 10) {
+            totalCost = day * 100;
+        } else if (day <= 20) {
+            var firstTenDay = 10 * 100;
+            var remainingDay = day - 10; //counting remaining  day to get 11-20days
+            var secondTenDay = remainingDay * 80;
+            totalCost = firstTenDay + secondTenDay;
+        } else {
+            var firstTenDay = 10 * 100;
+            var secondTenDay = 10 * 80;
+            var remainingDay = day - 20; //counting remaining  day to get after 20 days
+            var restOfTheDay = remainingDay * 50;
+            totalCost = firstTenDay + secondTenDay + restOfTheDay;
+        }
     }
-    return totalCost;
+
+    return totalCost; // value to be returned to the function caller
 }
 
-var result = hotelCost(0);
-console.log(result);
+// var result = hotelCost(35);
+// console.log(result);
+
+
+
 
 //Mega friend name
 function megaFriend(friendsName) {
     var longName = friendsName[0];
-    for (var i = 0; i < friendsName.length; i++) {
-        var element = friendsName[i];
-        if (element.length > longName.length) {
-            longName = element;
+
+
+    if (friendsName == "") {
+        return ("Friends name input is invalid");     //Validation Checker
+    }
+    else {
+
+        for (var i = 0; i < friendsName.length; i++) {
+            var element = friendsName[i];
+            if (element.length > longName.length) {        //checking longName from the array
+                longName = element;
+            }
         }
     }
-    if (friendsName== ""){//Validation Checker
-        return("Array string is invalid");
-    }
-    return longName; //return value to calling function
+
+
+    return longName; // value to be returned to the function caller
 }
 
-var result = megaFriend(["abdul wadud Prince","deepu", "unmoy", "shamim", "abdul wahid Tanzim"]);
-console.log(result);
+// var result = megaFriend(["abdul wadud Prince", "deepu", "unmoy", "shamim", "abdul wahid Tanzim"]);
+// console.log(result);
