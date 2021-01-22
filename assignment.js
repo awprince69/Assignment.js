@@ -1,10 +1,15 @@
 function kilometerToMeter(kilometer) {
     var meter = kilometer * 1000;
+
+    if(kilometer<0){
+        throw new Error("Enter valid Number");
+    }
+
     return meter;
 }
 
-// var user1 = kilometerToMeter(1);
-// console.log(user1);
+var user1 = kilometerToMeter(-5);
+console.log(user1);
 // var user2 = kilometerToMeter(5);
 // console.log(user2);
 
@@ -14,9 +19,9 @@ function budgetCalculator(watch, phone, laptop) {
     var phonePrice = phone * 100;
     var laptopPrice = laptop * 500;
 
-    var totalPrice = watchPrice + phonePrice + laptopPrice;
+    var totalBudget = watchPrice + phonePrice + laptopPrice;
 
-    return totalPrice;
+    return totalBudget;
 }
 
 // var result = budgetCalculator(10, 8, 2);
@@ -28,13 +33,13 @@ function hotelCost(day) {
         totalCost = day * 100;
     } else if (day <= 20) {
         var day10 = 10 * 100;
-        var remainingDay = day - 10; //cointing remaining  day to get 11-20days
+        var remainingDay = day - 10; //counting remaining  day to get 11-20days
         var day20 = remainingDay * 80;
         totalCost = day10 + day20;
     } else {
         var day10 = 10 * 100;
         var day20 = 10 * 80;
-        var remainingDay = day - 20; //cointing remaining  day to get after 20 days
+        var remainingDay = day - 20; //counting remaining  day to get after 20 days
         var restOfTheDay = remainingDay * 50;
         totalCost = day10 + day20 + restOfTheDay;
     }
@@ -55,5 +60,5 @@ function megaFriend(friendsName) {
     return longName;
 }
 
-var result = megaFriend(["abdul wadud Prince","deepu", "unmoy", "shamim", "abdul wahid Tanzim"]);
-console.log(result);
+// var result = megaFriend(["abdul wadud Prince","deepu", "unmoy", "shamim", "abdul wahid Tanzim"]);
+// console.log(result);
