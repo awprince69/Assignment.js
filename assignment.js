@@ -1,3 +1,4 @@
+//https://github.com/awprince69/Assignment.js
 
 
 //Kilometer to Meter Calculation
@@ -12,9 +13,6 @@ function kilometerToMeter(kilometer) {
 
     return meter; // value to be returned to the function caller
 }
-
-// var user1 = kilometerToMeter(8);
-// console.log(user1);
 
 
 
@@ -33,9 +31,6 @@ function budgetCalculator(watch, phone, laptop) {
 
     return totalBudget;     // value to be returned to the function caller
 }
-
-// var result = budgetCalculator(1, 5, 5);
-// console.log(result);
 
 
 
@@ -67,9 +62,6 @@ function hotelCost(day) {
     return totalCost; // value to be returned to the function caller
 }
 
-// var result = hotelCost(35);
-// console.log(result);
-
 
 
 
@@ -94,6 +86,3 @@ function megaFriend(friendsName) {
 
     return longName; // value to be returned to the function caller
 }
-
-// var result = megaFriend(["abdul wadud Prince", "deepu", "unmoy", "shamim", "abdul wahid Tanzim"]);
-// console.log(result);
