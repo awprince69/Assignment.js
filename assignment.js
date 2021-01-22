@@ -2,15 +2,15 @@
 function kilometerToMeter(kilometer) {
     var meter = kilometer * 1000;
 
-    if (kilometer < 0) {
+    if (kilometer <= 0) {
         return ("Kilometer input is invalid");//validation checker
     }
 
     return meter;
 }
 
-// var user1 = kilometerToMeter(-1);
-// console.log(user1);
+var user1 = kilometerToMeter(-1);
+console.log(user1);
 
 //Budget calulator
 
@@ -21,15 +21,15 @@ function budgetCalculator(watch, phone, laptop) {
 
     var totalBudget = watchPrice + phonePrice + laptopPrice;
 
-    if (watchPrice < 0 || phonePrice < 0 || laptopPrice < 0) {   //validation checker
+    if (watchPrice <=0 || phonePrice <=0 || laptopPrice <=0) {   //validation checker
         return ("Budgetcalculator input is invalid");
     }
 
     return totalBudget;
 }
 
-// var result = budgetCalculator(-1, -1);
-// console.log(result);
+var result = budgetCalculator(0, 0,0);
+console.log(result);
 
 //Hotel Cost Counting
 function hotelCost(day) {
@@ -48,10 +48,13 @@ function hotelCost(day) {
         var restOfTheDay = remainingDay * 50;
         totalCost = firstTenDay + secondTenDay + restOfTheDay;
     }
+    if(day<=0){
+        return ("Day cannot be Negative");
+    }
     return totalCost;
 }
 
-var result = hotelCost(21);
+var result = hotelCost(0);
 console.log(result);
 
 //Mega friend name
@@ -63,11 +66,11 @@ function megaFriend(friendsName) {
             longName = element;
         }
     }
-    if (friendsName== ""){
-        return("Array string is invalid");//if input array  string is empty then show error message.
+    if (friendsName== ""){//Validation Checker
+        return("Array string is invalid");
     }
-    return longName;
+    return longName; //return value to calling function
 }
 
-// var result = megaFriend([]);
-// console.log(result);
+var result = megaFriend(["abdul wadud Prince","deepu", "unmoy", "shamim", "abdul wahid Tanzim"]);
+console.log(result);
